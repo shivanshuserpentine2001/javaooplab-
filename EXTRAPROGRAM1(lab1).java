@@ -20,7 +20,7 @@ public static void main (String [] args) {
 sc.close();
 }
 }
-//// program 2 under LAB1 EXTRAS//
+//// program 2 under LAB1 EXTRAS///
 import java.util.Scanner;
 
 public class Y{

@@ -1,54 +1,35 @@
 import java.util.Scanner;
-class Book {
-	String name;
-	String author;
-	int price;
-	int num_pages;
-	Book()
-	{}
-	Book(String name,String author,int price,int num_pages)
-	{
-		this.name=name;
-		this.author=author;
-		this.price=price;
-		this.num_pages=num_pages;
+ class TestBook {
+public static void main(String args[]) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the Number of Books:");
+	int n = sc.nextInt();
+	Book B[]= new Book[n];
+	for(int i=0;i<n;i++) {
+		B[i] = new Book();
 	}
-	void accept()
-	{
-		Scanner s=new Scanner(System.in);
-		System.out.println("Enter the name of the book");
-		name=s.next();
-		System.out.println("Enter the author of the book");
-		author=s.next();
-		System.out.println("Enter the price of the book");
-		price=s.nextInt();
-		System.out.println("Enter the number of pages of the book");
-		num_pages=s.nextInt();
-	}
-	public String toString()
-	{
-		return ("Name: "+name + "\n" + "Author: "+author + "\n" + "Price: "+price + "\n" +"Number of pages: "+num_pages );
-	}
+	for(int i=0;i<n;i++) {
+		System.out.println(B[i]);
+	System.out.println();}
 }
-class BookMain {
-	public static void main(String ss[])
-	{
-		Scanner a=new Scanner(System.in);
-		Book b1=new Book("Heights","Anne",299,345);
-		System.out.println("Sample input:\n"+b1);
-		System.out.println("Enter the number of books");
-		int n=a.nextInt();
-		Book b[]=new Book[n];
-		for(int i=0;i<n;i++)
-		{
-			b[i]=new Book();
-			System.out.println("Enter the details of "+(i+1)+" book");
-			b[i].accept();
-		}
-		for(int i=0;i<n;i++)
-		{
-			System.out.println("Details of book "+(i+1));
-			System.out.println(b[i]);
-		}
+}
+class Book{
+	String book_name,book_author ;
+	int price,num_pages;
+	Book(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Name of The book:\t");
+		book_name = sc.nextLine();
+		System.out.print("Enter the Author of book "+book_name+":\t");
+		book_author = sc.nextLine();
+		System.out.print("Enter the Price of book "+book_name+":\t");
+		price = sc.nextInt();
+		System.out.print("Enter the Number of pages:\t");
+		num_pages = sc.nextInt();
+		sc.nextLine();
+		System.out.println();
+	}
+	public String toString() {
+		return("Name of Book : "+this.book_name+"\nAuthor : "+this.book_author+"\nPrice : "+this.price+"\nNumber of Pages: "+this.num_pages);
 	}
 }

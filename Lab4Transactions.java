@@ -8,7 +8,7 @@ int wthdraw_balance;
 String customername;
 String Account_Number;
 String Account_Type;
-int Balance=27890;
+int Balance=27800;
 void accept()
 {
 Scanner s=new Scanner(System.in); 
